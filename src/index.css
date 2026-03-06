@@ -1,98 +1,48 @@
-:root {
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  /* Premium Palette */
-  --color-black: #0A0A0A;
-  --color-gold: #D4AF37;
-  --color-gold-light: #F1D279;
-  --color-nude: #F5F5DC;
-  --color-nude-dark: #E1D5B8;
-  --color-white: #FFFFFF;
-  --color-gray: #888888;
-  
-  /* Utilities */
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --shadow-gold: 0 4px 20px rgba(212, 175, 55, 0.2);
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-  color-scheme: dark;
-  background-color: var(--color-black);
-  color: var(--color-white);
+  body {
+    @apply bg-luxury-white text-luxury-black font-sans antialiased overflow-x-hidden;
+  }
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight text-luxury-black;
+  }
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-content: center;
-  min-width: 320px;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+@layer components {
 
-#root {
-  width: 100%;
-}
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-luxury-gold text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-luxury-gold/30;
+  }
 
-h1, h2, h3, h4 {
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 bg-transparent text-luxury-white border border-luxury-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:bg-white/10;
+  }
 
-.text-gold { color: var(--color-gold); }
-.bg-gold { background-color: var(--color-gold); }
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:-translate-y-1;
+  }
 
-/* Luxury Button Styles */
-.btn-primary {
-  background: var(--color-gold);
-  color: var(--color-black);
-  padding: 1rem 2rem;
-  border-radius: 4px;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
-}
+  /* Containers */
+  .container-pad {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
 
-.btn-primary:hover {
-  background: var(--color-gold-light);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-gold);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--color-gold);
-  padding: 1rem 2rem;
-  border-radius: 4px;
-  font-weight: 700;
-  border: 2px solid var(--color-gold);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
-}
-
-.btn-secondary:hover {
-  background: rgba(212, 175, 55, 0.1);
-  transform: translateY(-2px);
-}
-
-/* Glassmorphism utility */
-.glass {
-  background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
-  border-radius: 12px;
+  /* Glass/Cards */
+  .glass-card {
+    @apply bg-white border border-gray-100 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden;
+  }
 }

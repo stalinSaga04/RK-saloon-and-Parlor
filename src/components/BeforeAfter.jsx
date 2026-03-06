@@ -1,48 +1,67 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import './BeforeAfter.css'
 
 export default function BeforeAfter() {
-    const [sliderPos, setSliderPos] = useState(50)
-
-    const handleMove = (e) => {
-        const rect = e.currentTarget.getBoundingClientRect()
-        const x = ((e.clientX || e.touches[0].clientX) - rect.left) / rect.width
-        setSliderPos(Math.max(0, Math.min(100, x * 100)))
-    }
-
     return (
         <section className="before-after-section">
             <div className="section-header">
-                <h2 className="text-gold">Real Transformations</h2>
-                <p>See why our clients trust us with their look.</p>
+                <h2>Real Transformations</h2>
+                <p>Our clients' results speak for themselves.</p>
             </div>
 
-            <div
-                className="slider-container"
-                onMouseMove={handleMove}
-                onTouchMove={handleMove}
+            <motion.div
+                className="photo-grid"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
             >
-                <div className="img-wrapper before">
-                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&q=40&w=1200" alt="Before" />
-                    <div className="label">BEFORE</div>
-                </div>
-
-                <div
-                    className="img-wrapper after"
-                    style={{ clipPath: `inset(0 0 0 ${sliderPos}%)` }}
-                >
-                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&q=80&w=1200&hue=-50" alt="After" />
-                    <div className="label">AFTER</div>
-                </div>
-
-                <div className="slider-handle" style={{ left: `${sliderPos}%` }}>
-                    <div className="handle-line"></div>
-                    <div className="handle-circle">
-                        <span>↔</span>
+                <div className="photo-card">
+                    <img src="/t1-before.jpg" alt="Before transformation 1"
+                        onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }} />
+                    <div className="photo-placeholder" style={{ display: 'none' }}>
+                        <span>📸</span>
+                        <p>Add Before Photo</p>
+                        <small>Drop t1-before.jpg in /public folder</small>
                     </div>
+                    <div className="photo-label before-lbl">BEFORE</div>
                 </div>
-            </div>
+
+                <div className="photo-card featured">
+                    <img src="/t1-after.jpg" alt="After transformation 1"
+                        onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }} />
+                    <div className="photo-placeholder" style={{ display: 'none' }}>
+                        <span>✨</span>
+                        <p>Add After Photo</p>
+                        <small>Drop t1-after.jpg in /public folder</small>
+                    </div>
+                    <div className="photo-label after-lbl">AFTER</div>
+                </div>
+
+                <div className="photo-card">
+                    <img src="/t2-before.jpg" alt="Before transformation 2"
+                        onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }} />
+                    <div className="photo-placeholder" style={{ display: 'none' }}>
+                        <span>📸</span>
+                        <p>Add Before Photo</p>
+                        <small>Drop t2-before.jpg in /public folder</small>
+                    </div>
+                    <div className="photo-label before-lbl">BEFORE</div>
+                </div>
+
+                <div className="photo-card featured">
+                    <img src="/t2-after.jpg" alt="After transformation 2"
+                        onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }} />
+                    <div className="photo-placeholder" style={{ display: 'none' }}>
+                        <span>✨</span>
+                        <p>Add After Photo</p>
+                        <small>Drop t2-after.jpg in /public folder</small>
+                    </div>
+                    <div className="photo-label after-lbl">AFTER</div>
+                </div>
+            </motion.div>
+
+            <p className="ba-caption">✨ Real results from our happy clients at RK Saloon</p>
         </section>
     )
 }
