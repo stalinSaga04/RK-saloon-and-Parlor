@@ -4,14 +4,15 @@ import { motion } from 'framer-motion'
 const transformations = [
     {
         id: 1,
-        before: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&q=80&w=800",
+        before: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&q=80&w=800",
         after: "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&q=80&w=800",
         title: "Keratin Smooth",
         description: "From frizzy to flawless silky straight."
     },
     {
         id: 2,
-        before: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&q=80&w=800",
+        before: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800",
+        beforeStyle: { filter: "grayscale(80%) sepia(20%) brightness(75%) contrast(110%)" },
         after: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800",
         title: "Color Transformation",
         description: "Vibrant balayage highlights."
@@ -19,6 +20,7 @@ const transformations = [
     {
         id: 3,
         before: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=800",
+        beforeStyle: { filter: "brightness(90%) contrast(90%) sepia(10%)" },
         after: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&q=80&w=800",
         title: "Bridal Glow",
         description: "HD waterproof bridal makeup."
@@ -32,8 +34,8 @@ const transformations = [
     },
     {
         id: 5,
-        before: "/before.png",
-        after: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=800",
+        before: "https://images.unsplash.com/photo-1605980776566-0486c3ac7617?auto=format&fit=crop&q=80&w=800",
+        after: "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=800",
         title: "Hair Spa",
         description: "Intense deep conditioning repair."
     },
@@ -65,7 +67,7 @@ const CompareSlider = ({ item }) => {
             >
                 {/* BEFORE */}
                 <div className="absolute inset-0">
-                    <img src={item.before} alt="Before" className="w-full h-full object-cover pointer-events-none" />
+                    <img src={item.before} alt="Before" style={item.beforeStyle || {}} className="w-full h-full object-cover pointer-events-none" />
                     <div className="absolute bottom-4 left-4 bg-black/70 text-white text-xs font-bold px-3 py-1 rounded tracking-wider">BEFORE</div>
                 </div>
 
