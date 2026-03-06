@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Services from './components/Services'
@@ -10,6 +12,11 @@ import Footer from './components/Footer'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
 
 function App() {
+    useEffect(() => {
+        window.history.scrollRestoration = 'manual'
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div className="font-sans antialiased text-luxury-black bg-white overflow-x-hidden">
             <Navbar />
