@@ -157,7 +157,7 @@ Phone: ${formData.phone}`.replace(/ /g, '%20').replace(/\n/g, '%0A')
                                             type="date"
                                             name="date"
                                             required
-                                            min={new Date().toISOString().split('T')[0]}
+                                            min={new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split('T')[0]}
                                             className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-luxury-gold/30 focus:border-luxury-gold transition-colors cursor-pointer"
                                             value={formData.date}
                                             onChange={handleChange}
