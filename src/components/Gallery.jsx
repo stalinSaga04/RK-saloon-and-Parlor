@@ -4,7 +4,8 @@ import { motion } from 'framer-motion'
 const transformations = [
     {
         id: 1,
-        before: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&q=80&w=800",
+        before: "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&q=80&w=800",
+        beforeStyle: { filter: "grayscale(15%) sepia(30%) brightness(85%) contrast(90%) blur(0.5px)" },
         after: "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&q=80&w=800",
         title: "Keratin Smooth",
         description: "From frizzy to flawless silky straight."
@@ -20,29 +21,32 @@ const transformations = [
     {
         id: 3,
         before: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=800",
-        beforeStyle: { filter: "brightness(90%) contrast(90%) sepia(10%)" },
-        after: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&q=80&w=800",
+        beforeStyle: { filter: "brightness(85%) contrast(85%) sepia(15%) blur(1px)" },
+        after: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=800",
         title: "Bridal Glow",
         description: "HD waterproof bridal makeup."
     },
     {
         id: 4,
         before: "https://images.unsplash.com/photo-1621605815978-2c0021b0b306?auto=format&fit=crop&q=80&w=800",
-        after: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=800",
+        beforeStyle: { filter: "grayscale(30%) brightness(85%) contrast(90%) blur(1px)" },
+        after: "https://images.unsplash.com/photo-1621605815978-2c0021b0b306?auto=format&fit=crop&q=80&w=800",
         title: "Men's Styling",
         description: "Sharp haircut and beard grooming."
     },
     {
         id: 5,
         before: "https://images.unsplash.com/photo-1605980776566-0486c3ac7617?auto=format&fit=crop&q=80&w=800",
-        after: "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=800",
+        beforeStyle: { filter: "grayscale(20%) brightness(90%) contrast(85%) blur(1.5px)" },
+        after: "https://images.unsplash.com/photo-1605980776566-0486c3ac7617?auto=format&fit=crop&q=80&w=800",
         title: "Hair Spa",
         description: "Intense deep conditioning repair."
     },
     {
         id: 6,
-        before: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=800",
-        after: "https://images.unsplash.com/photo-1512496015851-a1dc8a47ff17?auto=format&fit=crop&q=80&w=800",
+        before: "/hero.png",
+        beforeStyle: { filter: "grayscale(10%) sepia(10%) brightness(85%) contrast(90%) blur(1.5px)" },
+        after: "/hero.png",
         title: "Party Makeup",
         description: "Elegant evening transformation."
     }
