@@ -24,9 +24,9 @@ export default function Navbar() {
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-luxury-black/95 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'}`}>
             <div className="container-pad flex items-center justify-between">
-                <a href="#home" className="text-2xl font-bold flex flex-col tracking-wider">
+                <a href="#home" className="text-xl md:text-2xl font-bold flex flex-col tracking-wider">
                     <span className="text-luxury-gold uppercase leading-none">RK Saloon</span>
-                    <span className="text-white text-xs tracking-[0.2em] font-light mt-1">& Parlour</span>
+                    <span className="text-white text-[10px] md:text-xs tracking-[0.2em] font-light mt-1">& Parlour</span>
                 </a>
 
                 {/* Desktop Nav */}
