@@ -4,8 +4,9 @@ import { motion } from 'framer-motion'
 const transformations = [
     {
         id: 1,
-        before: "/keratin-before.jpg",
-        after: "/keratin-after.jpg",
+        before: "/keratin-new.jpg",
+        after: "/keratin-new.jpg",
+        isSideBySide: true,
         title: "Keratin Smooth",
         description: "From frizzy to flawless silky straight."
     },
