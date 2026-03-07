@@ -27,14 +27,6 @@ const transformations = [
     },
     {
         id: 4,
-        before: "https://images.unsplash.com/photo-1621605815978-2c0021b0b306?auto=format&fit=crop&q=80&w=800",
-        beforeStyle: { filter: "grayscale(20%) brightness(85%) contrast(90%)" },
-        after: "https://images.unsplash.com/photo-1621605815978-2c0021b0b306?auto=format&fit=crop&q=80&w=800",
-        title: "Men's Styling",
-        description: "Sharp haircut and beard grooming."
-    },
-    {
-        id: 5,
         before: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=800",
         beforeStyle: { filter: "grayscale(30%) brightness(90%) contrast(85%)" },
         after: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=800",
@@ -42,7 +34,7 @@ const transformations = [
         description: "Intense deep conditioning repair."
     },
     {
-        id: 6,
+        id: 5,
         before: "https://images.unsplash.com/photo-1481824429379-07aa5e5b0739?auto=format&fit=crop&q=80&w=800",
         beforeStyle: { filter: "grayscale(20%) sepia(10%) brightness(85%) contrast(90%)" },
         after: "https://images.unsplash.com/photo-1481824429379-07aa5e5b0739?auto=format&fit=crop&q=80&w=800",

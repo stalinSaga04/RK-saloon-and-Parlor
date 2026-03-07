@@ -31,11 +31,11 @@ const services = [
         description: "Rejuvenating custom facials for an instant, natural, and healthy glow."
     },
     {
-        title: "Beard Grooming",
-        price: "₹299",
-        duration: "30 min",
-        image: "https://images.unsplash.com/photo-1621605815978-2c0021b0b306?auto=format&fit=crop&q=80&w=800",
-        description: "Precision beard shaping, trimming, and conditioning for a sharp look."
+        title: "Manicure & Pedicure",
+        price: "₹799",
+        duration: "60 min",
+        image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=800",
+        description: "Luxurious nail care treatments including shaping, buffing, and premium polish application."
     },
     {
         title: "Bridal Makeup",
