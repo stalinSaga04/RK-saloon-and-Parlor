@@ -56,7 +56,7 @@ const CompareSlider = ({ item }) => {
                         alt="Before"
                         style={{
                             ...(item.beforeStyle || {}),
-                            ...(item.isSideBySide ? { objectPosition: 'left center', width: '200%', maxWidth: 'none' } : {})
+                            objectPosition: item.isSideBySide ? '0% 50%' : 'center'
                         }}
                         className="w-full h-full object-cover pointer-events-none"
                     />
@@ -71,7 +71,7 @@ const CompareSlider = ({ item }) => {
                         src={item.after}
                         alt="After"
                         style={{
-                            ...(item.isSideBySide ? { objectPosition: 'right center', width: '200%', maxWidth: 'none' } : {})
+                            objectPosition: item.isSideBySide ? '100% 50%' : 'center'
                         }}
                         className="w-full h-full object-cover pointer-events-none"
                     />
@@ -86,8 +86,8 @@ const CompareSlider = ({ item }) => {
                     className="absolute top-0 bottom-0 w-1 bg-luxury-gold z-10 pointer-events-none shadow-[0_0_10px_rgba(0,0,0,0.3)]"
                     style={{ left: `calc(${sliderPos}% - 2px)` }}
                 >
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 h-7 md:w-8 md:h-8 bg-luxury-gold rounded-full flex items-center justify-center text-white shadow-[0_0_15px_rgba(212,175,55,0.6)]">
-                        <svg width="12" height="12" md:width="14" md:height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 h-7 md:w-8 md:h-8 bg-[#D4AF37] rounded-full flex items-center justify-center text-white shadow-[0_0_15px_rgba(212,175,55,0.6)]">
+                        <svg className="w-3 h-3 md:w-4 md:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M15 18l-6-6 6-6" />
                             <path d="M9 18l6-6-6-6" />
                         </svg>
