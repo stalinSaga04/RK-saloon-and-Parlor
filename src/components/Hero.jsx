@@ -6,11 +6,11 @@ export default function Hero() {
         <section id="home" className="relative min-h-screen flex items-center justify-center bg-luxury-black overflow-hidden pt-20">
             {/* Background Image with Parallax & Overlay */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-black/60 z-10"></div>
+                <div className="absolute inset-0 bg-black/40 z-10"></div>
                 <img
                     src="/haircut.png"
                     alt="RK Saloon Luxury Makeover"
-                    className="w-full h-full object-cover object-top opacity-70"
+                    className="w-full h-full object-cover object-top opacity-90 brightness-110"
                     style={{ transform: 'translateZ(-10px) scale(1.1)' }}
                 />
             </div>

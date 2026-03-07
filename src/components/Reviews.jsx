@@ -19,10 +19,10 @@ const reviews = [
     },
     {
         id: 3,
-        name: "Rahul M",
-        image: "https://randomuser.me/api/portraits/men/32.jpg",
+        name: "Ananya R",
+        image: "https://randomuser.me/api/portraits/women/32.jpg",
         rating: 5,
-        text: "Best salon in Chennai for men's grooming. The haircut and beard styling were sharp and precise. Highly recommend."
+        text: "The best makeover experience in Chennai! My party makeup was flawless and stayed perfect all night. Truly professional team."
     },
     {
         id: 4,
@@ -62,26 +62,26 @@ export default function Reviews() {
     }
 
     return (
-        <section id="reviews" className="py-24 bg-luxury-black text-white relative overflow-hidden">
+        <section id="reviews" className="py-16 md:py-24 bg-luxury-black text-white relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-luxury-gold/5 rounded-full blur-[100px] -mr-20 -mt-20"></div>
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-luxury-gold/5 rounded-full blur-[120px] -ml-20 -mb-20"></div>
 
             <div className="container-pad relative z-10">
-                <div className="text-center max-w-3xl mx-auto mb-16">
+                <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Loved by Our Clients</h2>
-                    <p className="text-gray-400 text-lg">Don't just take our word for it. Read what our beautiful clients have to say about their transformations.</p>
+                    <p className="text-gray-400 text-base md:text-lg px-4">Don't just take our word for it. Read what our beautiful clients have to say about their transformations.</p>
                 </div>
 
-                <div className="max-w-4xl mx-auto relative px-12 md:px-20">
+                <div className="max-w-4xl mx-auto relative px-4 md:px-20">
                     <button
                         onClick={prevReview}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-luxury-gold text-white rounded-full flex items-center justify-center transition-all z-20"
+                        className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-luxury-gold text-white rounded-full flex items-center justify-center transition-all z-20"
                     >
                         <ChevronLeft size={24} />
                     </button>
 
-                    <div className="relative h-[280px] md:h-[220px] flex items-center justify-center">
+                    <div className="relative min-h-[400px] md:min-h-[220px] flex items-center justify-center">
                         <AnimatePresence initial={false} custom={direction}>
                             <motion.div
                                 key={currentIndex}
@@ -93,28 +93,28 @@ export default function Reviews() {
                                 transition={{ duration: 0.4, ease: "easeInOut" }}
                                 className="absolute w-full"
                             >
-                                <div className="glass-card bg-white/5 border-white/10 p-8 md:p-10 flex flex-col md:flex-row gap-8 items-center text-center md:text-left">
+                                <div className="glass-card bg-white/5 border-white/10 p-6 md:p-10 flex flex-col md:flex-row gap-6 md:gap-8 items-center text-center md:text-left">
                                     <div className="shrink-0 relative">
                                         <img
                                             src={reviews[currentIndex].image}
                                             alt={reviews[currentIndex].name}
-                                            className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-luxury-gold/30 shadow-lg"
+                                            className="w-20 h-20 md:w-32 md:h-32 rounded-full object-cover border-4 border-luxury-gold/30 shadow-lg"
                                         />
-                                        <div className="absolute -bottom-3 -right-3 bg-luxury-gold text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg">
-                                            <Quote size={18} fill="currentColor" />
+                                        <div className="absolute -bottom-2 -right-2 bg-luxury-gold text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg">
+                                            <Quote size={14} fill="currentColor" />
                                         </div>
                                     </div>
 
                                     <div className="flex-grow">
-                                        <div className="flex justify-center md:justify-start gap-1 mb-4 text-luxury-gold">
+                                        <div className="flex justify-center md:justify-start gap-1 mb-3 md:mb-4 text-luxury-gold">
                                             {[...Array(5)].map((_, i) => (
-                                                <Star key={i} size={18} fill={i < reviews[currentIndex].rating ? "currentColor" : "none"} strokeWidth={i < reviews[currentIndex].rating ? 0 : 2} />
+                                                <Star key={i} size={16} fill={i < reviews[currentIndex].rating ? "currentColor" : "none"} strokeWidth={i < reviews[currentIndex].rating ? 0 : 2} />
                                             ))}
                                         </div>
-                                        <p className="text-xl md:text-2xl font-light italic mb-6 leading-relaxed text-gray-200">
+                                        <p className="text-lg md:text-2xl font-light italic mb-4 md:mb-6 leading-relaxed text-gray-200">
                                             "{reviews[currentIndex].text}"
                                         </p>
-                                        <h4 className="text-lg font-bold text-white">— {reviews[currentIndex].name}</h4>
+                                        <h4 className="text-base md:text-lg font-bold text-white">— {reviews[currentIndex].name}</h4>
                                     </div>
                                 </div>
                             </motion.div>
@@ -123,12 +123,22 @@ export default function Reviews() {
 
                     <button
                         onClick={nextReview}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-luxury-gold text-white rounded-full flex items-center justify-center transition-all z-20"
+                        className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-luxury-gold text-white rounded-full flex items-center justify-center transition-all z-20"
                     >
                         <ChevronRight size={24} />
                     </button>
 
-                    <div className="flex justify-center gap-2 mt-8">
+                    {/* Mobile Navigation Arrows */}
+                    <div className="flex md:hidden justify-center gap-4 mt-6">
+                        <button onClick={prevReview} className="w-10 h-10 bg-white/10 text-white rounded-full flex items-center justify-center">
+                            <ChevronLeft size={20} />
+                        </button>
+                        <button onClick={nextReview} className="w-10 h-10 bg-white/10 text-white rounded-full flex items-center justify-center">
+                            <ChevronRight size={20} />
+                        </button>
+                    </div>
+
+                    <div className="flex justify-center gap-2 mt-8 md:mt-10">
                         {reviews.map((_, index) => (
                             <button
                                 key={index}

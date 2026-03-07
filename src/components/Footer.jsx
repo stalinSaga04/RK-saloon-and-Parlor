@@ -48,7 +48,7 @@ export default function Footer() {
                             <li><a href="#booking" className="text-gray-400 hover:text-luxury-gold transition-colors text-sm">Bridal Makeup</a></li>
                             <li><a href="#booking" className="text-gray-400 hover:text-luxury-gold transition-colors text-sm">Facial & Skincare</a></li>
                             <li><a href="#booking" className="text-gray-400 hover:text-luxury-gold transition-colors text-sm">Keratin Treatment</a></li>
-                            <li><a href="#booking" className="text-gray-400 hover:text-luxury-gold transition-colors text-sm">Men's Grooming</a></li>
+                            <li><a href="#booking" className="text-gray-400 hover:text-luxury-gold transition-colors text-sm">Manicure & Pedicure</a></li>
                         </ul>
                     </div>
 
@@ -76,11 +76,15 @@ export default function Footer() {
 
                 </div>
 
-                {/* Copyright */}
-                <div className="border-t border-white/10 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-gray-500 text-sm">
-                        © 2026 RK Saloon. All rights reserved.
-                    </p>
+                <div className="border-t border-white/10 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div className="flex flex-col items-center md:items-start gap-1">
+                        <p className="text-gray-500 text-sm">
+                            © 2026 RK Saloon. All rights reserved.
+                        </p>
+                        <p className="text-luxury-gold/60 text-[10px] tracking-[0.2em] font-light uppercase">
+                            Developed by Sagay AI Lab
+                        </p>
+                    </div>
                     <div className="flex gap-6">
                         <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
                         <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">Terms of Service</a>

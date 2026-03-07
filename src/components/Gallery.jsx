@@ -4,9 +4,8 @@ import { motion } from 'framer-motion'
 const transformations = [
     {
         id: 1,
-        before: "/keratin-new.jpg",
-        after: "/keratin-new.jpg",
-        isSideBySide: true,
+        before: "/keratin-before-hd.jpg",
+        after: "/keratin-after-hd.jpg",
         title: "Keratin Smooth",
         description: "From frizzy to flawless silky straight."
     },
@@ -19,9 +18,8 @@ const transformations = [
     },
     {
         id: 3,
-        before: "/bridal-indian.jpg",
-        after: "/bridal-indian.jpg",
-        isSideBySide: true,
+        before: "/bridal-before-hd.jpg",
+        after: "/bridal-after-hd.jpg",
         title: "Traditional Bridal",
         description: "Elegant traditional Indian bridal transformation."
     },
@@ -78,16 +76,16 @@ const CompareSlider = ({ item }) => {
                 </div>
 
                 {/* Labels outside clipping overlays */}
-                <div className="absolute bottom-3 left-3 md:bottom-4 md:left-4 bg-black/70 text-white text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 rounded tracking-wider z-10 pointer-events-none uppercase">BEFORE</div>
-                <div className="absolute bottom-3 right-3 md:bottom-4 md:right-4 bg-luxury-gold text-white text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 rounded tracking-wider z-10 pointer-events-none shadow-sm uppercase">AFTER</div>
+                <div className="absolute bottom-2 left-2 md:bottom-4 md:left-4 bg-black/70 text-white text-[8px] md:text-xs font-bold px-1.5 md:px-3 py-0.5 md:py-1 rounded tracking-wider z-10 pointer-events-none uppercase">BEFORE</div>
+                <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4 bg-luxury-gold text-white text-[8px] md:text-xs font-bold px-1.5 md:px-3 py-0.5 md:py-1 rounded tracking-wider z-10 pointer-events-none shadow-sm uppercase">AFTER</div>
 
                 {/* Handle Line & Circle */}
                 <div
                     className="absolute top-0 bottom-0 w-1 bg-luxury-gold z-10 pointer-events-none shadow-[0_0_10px_rgba(0,0,0,0.3)]"
                     style={{ left: `calc(${sliderPos}% - 2px)` }}
                 >
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 h-7 md:w-8 md:h-8 bg-[#D4AF37] rounded-full flex items-center justify-center text-white shadow-[0_0_15px_rgba(212,175,55,0.6)]">
-                        <svg className="w-3 h-3 md:w-4 md:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-8 md:h-8 bg-[#D4AF37] rounded-full flex items-center justify-center text-white shadow-[0_0_15px_rgba(212,175,55,0.6)]">
+                        <svg className="w-2.5 h-2.5 md:w-4 md:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M15 18l-6-6 6-6" />
                             <path d="M9 18l6-6-6-6" />
                         </svg>
@@ -104,9 +102,9 @@ const CompareSlider = ({ item }) => {
                     className="slider-overlay absolute inset-0 w-full h-full z-20 m-0 cursor-ew-resize opacity-0"
                 />
             </div>
-            <div className="p-4 md:p-5 text-center bg-white border-t-4 border-luxury-gold/20 flex-grow flex flex-col justify-center z-10 relative">
-                <h3 className="font-bold text-base md:text-lg mb-0.5 md:mb-1">{item.title}</h3>
-                <p className="text-gray-500 text-xs md:text-sm leading-relaxed">{item.description}</p>
+            <div className="p-3 md:p-5 text-center bg-white border-t-4 border-luxury-gold/20 flex-grow flex flex-col justify-center z-10 relative">
+                <h3 className="font-bold text-sm md:text-lg mb-0.5 md:mb-1">{item.title}</h3>
+                <p className="text-gray-500 text-[10px] md:text-sm leading-tight md:leading-relaxed">{item.description}</p>
             </div>
         </div>
     )
