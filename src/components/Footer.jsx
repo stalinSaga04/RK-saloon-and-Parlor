@@ -1,8 +1,22 @@
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, MessageSquare } from 'lucide-react'
+import { useState } from 'react'
 
 export default function Footer() {
+    const [toast, setToast] = useState(null)
+
+    const handleSocialClick = (platform) => {
+        setToast(`${platform} — Coming Soon!`)
+        setTimeout(() => setToast(null), 2500)
+    }
+
     return (
         <footer className="bg-luxury-black text-white pt-20 pb-8 border-t-[8px] border-luxury-gold">
+            {/* Toast Notification */}
+            {toast && (
+                <div className="fixed top-6 left-1/2 -translate-x-1/2 z-[200] bg-luxury-gold text-white text-sm font-bold px-6 py-3 rounded-full shadow-xl animate-pulse">
+                    {toast}
+                </div>
+            )}
             <div className="container-pad">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
@@ -16,15 +30,15 @@ export default function Footer() {
                             Premium hair and beauty transformations tailored to your style. Experience the ultimate luxury and relaxation in Chennai.
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-luxury-gold transition-colors">
+                            <button onClick={() => handleSocialClick('Facebook')} className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-luxury-gold transition-colors cursor-pointer">
                                 <Facebook size={18} />
-                            </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-luxury-gold transition-colors">
+                            </button>
+                            <button onClick={() => handleSocialClick('Instagram')} className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-luxury-gold transition-colors cursor-pointer">
                                 <Instagram size={18} />
-                            </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-luxury-gold transition-colors">
+                            </button>
+                            <button onClick={() => handleSocialClick('Twitter')} className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-luxury-gold transition-colors cursor-pointer">
                                 <Twitter size={18} />
-                            </a>
+                            </button>
                         </div>
                     </div>
 
