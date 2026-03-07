@@ -18,8 +18,9 @@ const transformations = [
     },
     {
         id: 3,
-        before: "/bridal-before-hd.jpg",
-        after: "/bridal-after-hd.jpg",
+        before: "/bridal-indian-hd.jpg",
+        after: "/bridal-indian-hd.jpg",
+        isSideBySide: true,
         title: "Traditional Bridal",
         description: "Elegant traditional Indian bridal transformation."
     },
