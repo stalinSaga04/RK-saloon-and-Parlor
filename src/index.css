@@ -8,7 +8,9 @@
   }
 
   body {
-    @apply bg-luxury-white text-luxury-black font-sans antialiased overflow-x-hidden;
+    background-color: #ffffff;
+    color: #1A1A1A;
+    @apply font-sans antialiased overflow-x-hidden;
   }
 
   h1,
@@ -17,7 +19,8 @@
   h4,
   h5,
   h6 {
-    @apply font-bold tracking-tight text-luxury-black;
+    color: #1A1A1A;
+    @apply font-bold tracking-tight;
   }
 }
 
@@ -25,11 +28,11 @@
 
   /* Buttons */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 bg-luxury-gold text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-luxury-gold/30;
+    @apply inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#D4AF37]/30;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 bg-transparent text-luxury-white border border-luxury-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:bg-white/10;
+    @apply inline-flex items-center justify-center gap-2 bg-transparent text-white border border-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:bg-white/10;
   }
 
   .btn-whatsapp {
@@ -43,7 +46,11 @@
 
   /* Glass/Cards */
   .glass-card {
-    @apply bg-white/80 backdrop-blur-md shadow-[0_8px_30px_rgb(0, 0, 0, 0.04)] border border-white/20;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   /* Invisible robust slider overlay for before/after comparison */
