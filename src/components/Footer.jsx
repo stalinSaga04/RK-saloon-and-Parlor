@@ -62,14 +62,14 @@ export default function Footer() {
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone size={18} className="text-luxury-gold shrink-0" />
-                                <a href="tel:+919876543210" className="text-gray-400 hover:text-luxury-gold transition-colors text-sm">+91 98765 43210</a>
+                                <a href="tel:+918122139068" className="text-gray-400 hover:text-luxury-gold transition-colors text-sm">+91 81221 39068</a>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail size={18} className="text-luxury-gold shrink-0" />
                                 <a href="mailto:hello@rksaloon.com" className="text-gray-400 hover:text-luxury-gold transition-colors text-sm">hello@rksaloon.com</a>
                             </li>
                         </ul>
-                        <a href="https://wa.me/91XXXXXXXXXX" className="mt-6 inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded font-bold text-sm tracking-wide hover:bg-[#20b858] transition-colors">
+                        <a href="https://wa.me/918122139068" className="mt-6 inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded font-bold text-sm tracking-wide hover:bg-[#20b858] transition-colors">
                             <MessageSquare size={16} /> Chat on WhatsApp
                         </a>
                     </div>

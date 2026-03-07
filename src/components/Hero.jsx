@@ -53,7 +53,7 @@ export default function Hero() {
                     <a href="#booking" className="btn-primary w-full sm:w-auto text-base">
                         <Calendar size={18} /> Book Appointment
                     </a>
-                    <a href="https://wa.me/91XXXXXXXXXX" className="btn-whatsapp w-full sm:w-auto text-base">
+                    <a href="https://wa.me/918122139068" className="btn-whatsapp w-full sm:w-auto text-base">
                         <Phone size={18} /> WhatsApp Booking
                     </a>
                 </motion.div>

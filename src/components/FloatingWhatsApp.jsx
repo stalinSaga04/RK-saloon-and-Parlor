@@ -20,7 +20,7 @@ export default function FloatingWhatsApp() {
     }, [])
 
     const handleWhatsAppClick = () => {
-        window.open("https://wa.me/91XXXXXXXXXX", "_blank")
+        window.open("https://wa.me/918122139068", "_blank")
     }
 
     return (

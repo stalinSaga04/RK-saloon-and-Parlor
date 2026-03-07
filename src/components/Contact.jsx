@@ -68,7 +68,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h4 className="text-xl font-bold mb-2 text-luxury-black">Contact Info</h4>
-                                    <p className="text-gray-600 mb-1">Mobile: <a href="tel:+919876543210" className="hover:text-luxury-gold font-bold">+91 98765 43210</a></p>
+                                    <p className="text-gray-600 mb-1">Mobile: <a href="tel:+918122139068" className="hover:text-luxury-gold font-bold">+91 81221 39068</a></p>
                                     <p className="text-gray-600">Landline: <a href="tel:04423456789" className="hover:text-luxury-gold font-bold">044 2345 6789</a></p>
                                 </div>
                             </div>
