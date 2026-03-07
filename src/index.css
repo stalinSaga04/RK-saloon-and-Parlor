@@ -43,6 +43,31 @@
 
   /* Glass/Cards */
   .glass-card {
-    @apply bg-white border border-gray-100 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden;
+    @apply bg-white/80 backdrop-blur-md shadow-[0_8px_30px_rgb(0, 0, 0, 0.04)] border border-white/20;
+  }
+
+  /* Invisible robust slider overlay for before/after comparison */
+  .slider-overlay {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    outline: none;
+  }
+
+  .slider-overlay::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 500px;
+    background: transparent;
+    cursor: ew-resize;
+  }
+
+  .slider-overlay::-moz-range-thumb {
+    width: 50px;
+    height: 500px;
+    background: transparent;
+    cursor: ew-resize;
+    border: none;
   }
 }
