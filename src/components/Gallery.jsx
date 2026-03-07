@@ -4,27 +4,25 @@ import { motion } from 'framer-motion'
 const transformations = [
     {
         id: 1,
-        before: "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&q=80&w=800",
-        beforeStyle: { filter: "grayscale(10%) sepia(20%) brightness(85%) contrast(100%) blur(0.5px)" },
-        after: "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&q=80&w=800",
+        before: "/keratin-before.jpg",
+        after: "/keratin-after.jpg",
         title: "Keratin Smooth",
         description: "From frizzy to flawless silky straight."
     },
     {
         id: 2,
-        before: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&q=80&w=800",
-        beforeStyle: { filter: "grayscale(70%) sepia(15%) brightness(80%) contrast(110%)" },
-        after: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&q=80&w=800",
-        title: "Color Transformation",
-        description: "Vibrant balayage highlights."
+        before: "/beanie-before.jpg",
+        after: "/beanie-after.jpg",
+        title: "Bridal Glow",
+        description: "Flawless HD waterproof bridal makeup."
     },
     {
         id: 3,
-        before: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800",
-        beforeStyle: { filter: "brightness(90%) contrast(90%) saturate(60%) sepia(10%)" },
-        after: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800",
-        title: "Bridal Glow",
-        description: "HD waterproof bridal makeup."
+        before: "/bridal-indian.jpg",
+        after: "/bridal-indian.jpg",
+        isSideBySide: true,
+        title: "Traditional Bridal",
+        description: "Elegant traditional Indian bridal transformation."
     },
     {
         id: 4,
@@ -60,7 +58,15 @@ const CompareSlider = ({ item }) => {
             <div className="relative aspect-square md:aspect-[4/5] w-full select-none overflow-hidden">
                 {/* BEFORE Image */}
                 <div className="absolute inset-0">
-                    <img src={item.before} alt="Before" style={item.beforeStyle || {}} className="w-full h-full object-cover pointer-events-none" />
+                    <img
+                        src={item.before}
+                        alt="Before"
+                        style={{
+                            ...(item.beforeStyle || {}),
+                            ...(item.isSideBySide ? { objectPosition: 'left center', width: '200%', maxWidth: 'none' } : {})
+                        }}
+                        className="w-full h-full object-cover pointer-events-none"
+                    />
                 </div>
 
                 {/* AFTER Image (Clipped) */}
@@ -68,7 +74,14 @@ const CompareSlider = ({ item }) => {
                     className="absolute inset-0"
                     style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
                 >
-                    <img src={item.after} alt="After" className="w-full h-full object-cover pointer-events-none" />
+                    <img
+                        src={item.after}
+                        alt="After"
+                        style={{
+                            ...(item.isSideBySide ? { objectPosition: 'right center', width: '200%', maxWidth: 'none' } : {})
+                        }}
+                        className="w-full h-full object-cover pointer-events-none"
+                    />
                 </div>
 
                 {/* Labels outside clipping overlays */}
